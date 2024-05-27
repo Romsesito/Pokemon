@@ -1,4 +1,5 @@
-﻿using Metal;
+﻿
+using Newtonsoft.Json;
 using Pokemon.Models;
 using System;
 using System.Collections.Generic;
@@ -13,16 +14,20 @@ namespace Pokemon.Services
 
         public HttpClient _httpClient;
         public PokemonApis()
-        { 
+        {
             _httpClient = new HttpClient();
         }
 
-        public async List<PokemonInfo> DevuelveListadoPokemones()
+        public async Task<List<PokemonInfo>> DevuelveListadoPokemones()
         {
             string url = "https://pokeapi.co/api/v2/ability/?limit=20&offset=20";
-            string json = await _httpClient.GetStringAsync(url); 
+            string json = await _httpClient.GetStringAsync(url);
 
+            ResourceList resourcelist_pokemon = JsonConvert.DeserializeObject<ResourceList>(json);
+            return resourcelist_pokemon.results;
         }
+    } 
+
 
 }
 
