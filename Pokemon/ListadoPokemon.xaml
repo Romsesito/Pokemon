@@ -4,7 +4,7 @@
              x:Class="Pokemon.ListadoPokemon"
              Title="ListadoPokemon">
     <VerticalStackLayout>
-        <ListView x:Name="listado_pokemones" ItemsSource="{Binding list_pokemon}">
+        <ListView x:Name="listado_pokemones" ItemsSource="{Binding list_pokemon}" ItemSelected="MuestraResumenPokemon">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
