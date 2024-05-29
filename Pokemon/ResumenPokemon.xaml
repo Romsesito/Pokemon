@@ -6,7 +6,7 @@
     <VerticalStackLayout HorizontalOptions="Center">
         <Image
             x:Name="ImagePokemon"
-            HeightRequest="10"}/>
+            HeightRequest="10"/>
         <Label 
             x:Name="Habilidades"/>
     </VerticalStackLayout>

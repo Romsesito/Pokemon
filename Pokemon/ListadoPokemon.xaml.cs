@@ -26,10 +26,10 @@ public partial class ListadoPokemon : ContentPage
 
 		listado_pokemones.ItemsSource =list_pokemon;
     }
-	public void MuestraResumenPokemon(EventArgs eventArgs)
+	public void MuestraResumenPokemon(object sender, SelectedItemChangedEventArgs e)
     {
 		PokemonInfo poke_info = (PokemonInfo)e.SelectedItem; 
-		Navigation.PushAsync(new ResumenPokemon());
+		Navigation.PushAsync(new ResumenPokemon(poke_info.url));
     }
 
 } 

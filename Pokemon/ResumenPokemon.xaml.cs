@@ -1,4 +1,4 @@
-using Bumptech.Glide.Util;
+
 using Pokemon.Models;
 using Pokemon.Services;
 
