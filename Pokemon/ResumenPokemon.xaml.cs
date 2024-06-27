@@ -14,7 +14,7 @@ public partial class ResumenPokemon : ContentPage
 		CargaPokemon(url);
 	}
 
-	public  async void CargaPokemon(string url)
+	public  async Task CargaPokemon(string url)
     {	
 		PokemonApis poke_services = new PokemonApis();
 		caracteristicas = await poke_services.DevuelveCaracteristicasPokemon(url);
@@ -28,6 +28,8 @@ public partial class ResumenPokemon : ContentPage
         }
 
 		Habilidades.Text = habilidades;
+
+        
 
     }
 }

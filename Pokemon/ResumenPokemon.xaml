@@ -4,10 +4,23 @@
              x:Class="Pokemon.ResumenPokemon"
              Title="ResumenPokemon">
     <VerticalStackLayout HorizontalOptions="Center">
+
+   
+
         <Image
             x:Name="ImagePokemon"
-            HeightRequest="10"/>
-        <Label 
-            x:Name="Habilidades"/>
+            HeightRequest="500"
+            WidthRequest="500"/>
+
+        <Frame Padding="10" BorderColor="#F84C40">
+            <Label 
+        x:Name="Habilidades"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+           
+        </Frame>
+
     </VerticalStackLayout>
 </ContentPage>

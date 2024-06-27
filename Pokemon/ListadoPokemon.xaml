@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokemon.ListadoPokemon"
-             Title="ListadoPokemon">
+             Title="Lista Pokemon">
     <VerticalStackLayout>
         <ListView x:Name="listado_pokemones" ItemsSource="{Binding list_pokemon}" ItemSelected="MuestraResumenPokemon">
             <ListView.ItemTemplate>
@@ -15,21 +15,36 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                           
-                     
+
+                            <Frame Grid.Column="1"
+                                   BackgroundColor="#F84C40"
+                                   BorderColor="White"
+                                   CornerRadius="10"
+                                   HasShadow="True"
+                                   Padding="20"
+                                 >
+                                
+                                <!-- Nombre del Pokémon -->
                             <Label Grid.Column="1"
-                           Text="{Binding name}"
-                           FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding url}"
-                           FontAttributes="Italic"
-                           VerticalOptions="End" />
+                           
+                                Text="{Binding name}"
+                        
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                TextColor="White"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start" />
+
+
+
+                            </Frame>
+
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
+
             </ListView.ItemTemplate>
         </ListView>
     </VerticalStackLayout>
